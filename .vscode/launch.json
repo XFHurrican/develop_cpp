@@ -5,36 +5,22 @@
       "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/main",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceRoot}",
       "environment": [],
       "externalConsole": true,
       "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "preLaunchTask": "g++",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
-      "preLaunchTask": "build",
-      "miDebuggerPath": "/usr/bin/gdb",
-      "targetArchitecture": "x86_64",
-      "logging": {
-        "trace": true,
-        "traceResponse": true,
-        "engineLogging": true
-      },
-      "miDebuggerArgs": "-q",
-      "debugServerPath": "",
-      "debugServerArgs": "",
-      "filterStderr": true,
-      "filterStdout": false,
-      "serverStarted": "",
-      "serverLaunchTimeout": 10000,
-      "internalConsoleOptions": "openOnSessionStart"
+      ]
     },
     {
       "name": "C/C++ Runner: Debug Session",
